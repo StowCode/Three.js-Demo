@@ -1,6 +1,8 @@
 # THREE.js Demo
 <h4>by Mitchell Stowman</h4>
 
+# Deployment can be viewed here:
+https://stowcode-threejs-demo.vercel.app
 
 # Introduction
 This is a three.js demo project designed to show design and animation capabilities.
