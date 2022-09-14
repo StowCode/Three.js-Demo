@@ -13,12 +13,6 @@ h1 {
 	font-size: 28px;
 }
 
-#exp {
-	position: fixed;
-	top: 40px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
 h4 {
 	position: fixed;
 	z-index: 5;
@@ -28,7 +22,7 @@ h4 {
 
 #code_button {
 	position: fixed;
-	margin-left: 80%;
+	margin-left: 90%;
 	bottom: 40px;
 	z-index: 5;
 	background-color: rgba(255,255,255,0.9);
@@ -89,35 +83,4 @@ label {
 	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 	bottom: 40px;
 	margin-left: 25px;
-}
-
-/* Buttons */
-
-#camera_buttons {
-	position: fixed;
-	top: 30%;
-	margin-left: 15px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-direction: column;
-	height: 100px;
-	width: 100px;
-}
-
-.button {
-	background-color: rgba(255,255,255,.5);
-	display: flex;
-	align-items: center;
-	font-weight: 700;
-	height: 25px;
-	font-size: 16px;
-	padding-left: 5px;
-	padding-right: 5px;
-	border-radius: 10px;
-}
-
-.button:hover {
-	cursor: pointer;
-	background-color: rgba(255, 175, 235, 0.4)
 }
