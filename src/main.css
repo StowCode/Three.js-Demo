@@ -121,3 +121,7 @@ label {
 	cursor: pointer;
 	background-color: rgba(255, 175, 235, 0.4)
 }
+
+.button:active {
+	background-color: rgba(255, 175, 235, 0.4)
+}

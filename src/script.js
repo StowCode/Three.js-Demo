@@ -379,7 +379,7 @@ scene.add(rock, rock2, rock3)
 
             let target = new THREE.Vector3(4,5,-120)
             let birdTween = new TWEEN.Tween(birds.position) 
-            .to(target, 30000)
+            .to(target, 35000)
             .easing(TWEEN.Easing.Sinusoidal.InOut)
 
             birdTween.start()
@@ -401,6 +401,33 @@ scene.add(rock, rock2, rock3)
             mixers.push(mixer1)
 
             animate()
+        })
+
+        // DEER
+        loader.load('models/gltf/deer_female_non-commercial.glb', (gltf) => {
+            const deer = gltf.scene
+            deer.position.y = 1.99;
+            deer.position.x = 4;
+            deer.position.z = 0;
+            deer.rotateY(45)
+            // deer.scale.set(.015,.015,.015)
+            
+            deer.traverse(function(model) {
+                if(model.isMesh) {
+                    model.castShadow = true;
+                }
+            })
+            scene.add(deer)
+
+            const deerMixer = new THREE.AnimationMixer( deer )
+            deerMixer.clipAction(gltf.animations[0]).play()
+            deerMixer.timeScale = 3
+
+            console.log(gltf.scene)
+
+            mixers.push(deerMixer)
+            animate()
+            
         })
 
 
@@ -450,9 +477,9 @@ function clickpoint2() {
     controls.enabled = false //disable orbit controls to animate the camera
     
     new TWEEN.Tween(camera.position).to({ // from camera position
-        x: 10, //desired x position to go
+        x: 11, //desired x position to go
         y: 5, //desired y position to go
-        z: 17 //desired z position to go
+        z: 4 //desired z position to go
     }, 4000) // time take to animate
     .delay(0).easing(TWEEN.Easing.Quartic.InOut).start() // define delay, easing
     .onComplete(function () { //on finish animation
